@@ -109,9 +109,9 @@ protected:
   typename BinaryTreeLnk<Data>::NodeLnk* SkipOnLeft(typename BinaryTreeLnk<Data>::NodeLnk*&) noexcept;
   typename BinaryTreeLnk<Data>::NodeLnk* SkipOnRight(typename BinaryTreeLnk<Data>::NodeLnk*&) noexcept;
 
-  // è necessario ritornare un *& (riferimento a puntatore) oppure un **(doppio puntatore) perché così facendo ho sempre la
-  // certezza di star puntando ad una cella esistente di memoria, così da poter gesitre anche i casi in cui il puntatore punta
-  // ad un puntatore a nodo (left o right) dove left o right sono nullprt
+  // NOTA BENE: per le successive funzioni dovete ritornare un doppio puntatore e non un riferimento al puntatore perché
+  // se il prof vi becca con questo all'orale da di matto e vi toglie almeno un punto xD Quindi modificate il codice di
+  // conseguenza, scusate se non lo faccio io ma mi pesa davvero troppo il culo, BUONA FORTUNA.
   typename BinaryTreeLnk<Data>::NodeLnk* const& FindPointerToMin(typename BinaryTreeLnk<Data>::NodeLnk* const&) const noexcept;
   typename BinaryTreeLnk<Data>::NodeLnk*& FindPointerToMin(typename BinaryTreeLnk<Data>::NodeLnk* const&) noexcept;
   typename BinaryTreeLnk<Data>::NodeLnk* const& FindPointerToMax(typename BinaryTreeLnk<Data>::NodeLnk* const&) const noexcept;
